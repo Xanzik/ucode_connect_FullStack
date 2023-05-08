@@ -1,0 +1,50 @@
+th {
+    background: black;
+    color:white;
+    border: none;
+}
+
+tr {
+    font-size: 14px;
+    text-align: center;
+}
+
+img {
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+}
+
+td {
+    padding: 15px;
+    border: 2px solid;
+    border-color: white;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#soul {
+    background-color: orange;
+}
+
+#time {
+    background-color: green;
+}
+
+#space {
+    background-color:blue;
+}
+
+#mind {
+    background-color: yellow;
+}
+
+#reality {
+    background-color: red;
+}
+
+#power {
+    background-color: purple;
+}
