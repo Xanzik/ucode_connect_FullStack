@@ -1,27 +1,33 @@
-div {
-    height: 75px;
+.block {
+    height: 208px;
     width: 125px;
     display: inline-block;
+    background-color: white;
 }
 
 h2 {
     text-align: center;
     color: white;
-    font-family: 'Lato';
-    font-weight: 400px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     background-color: #4095B5;
     font-size: 1.5em;
+    margin-top: 0;
 }
 
 p {
     text-align: center;
-    font-family: 'Lato';
-    font-weight: 700px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     font-size: 2em;
+    margin-top: 5px;
+}
+
+.block:hover {
+    box-shadow: 0 0 10px 1px #000;
 }
 
 img {
     display: block;
-    margin: auto;
+    width: 125px;
 }
-  

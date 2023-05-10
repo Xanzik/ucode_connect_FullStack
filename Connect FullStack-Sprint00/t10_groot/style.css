@@ -1,0 +1,36 @@
+.box {
+  width: 100%;
+  max-width: calc(100% - 200px);
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: rgb(221,221,221);
+  margin: 25px;
+  position: relative;
+}
+
+.box::before,
+ .box::after {
+  content: "";
+  position: absolute;
+  border: 1px solid black;
+}
+
+.box::before {
+  height: calc(100% + 50px);
+  width: calc(100%);
+  top: -25px;
+  bottom: 25px;
+  right: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.box::after {
+  width: calc(100% + 50px);
+  height: calc(100%);
+  left: -25px;
+  right: -25px;
+  top: 0;
+  border-left: 0;
+  border-right: 0;
+}
