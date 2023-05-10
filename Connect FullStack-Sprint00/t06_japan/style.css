@@ -1,0 +1,6 @@
+.japan {
+    height: 200px;
+    width: 300px;
+    border: 3px solid gainsboro;
+    background: radial-gradient(circle, #bc002d 58px, #fff 60px);
+}
