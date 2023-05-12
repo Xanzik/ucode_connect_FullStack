@@ -1,0 +1,12 @@
+h1 {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+span {
+    color: white;
+    text-align: center;
+    position: relative;
+}
