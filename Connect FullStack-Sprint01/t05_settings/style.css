@@ -1,0 +1,246 @@
+form {
+  display: inline-flex;
+  margin: auto;
+  align-items: center;
+  background-color: rgb(61,71,82);
+  padding: 20px 0 20px 5px;
+  margin-left: 30%;
+}
+
+
+fieldset {
+  width: 400px;
+  background-color: rgb(70,82,95);
+  border: 0;
+}
+
+nav li {
+  background-color: rgb(48,58,67);
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
+  border-radius: 0 15px 15px 0;
+}
+
+nav {
+  float: left;
+  width: 50px;
+  margin-right: 20px;
+}
+
+nav img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+select {
+  background-color: rgb(52,62,73);
+  border-color: rgb(52,109,187);
+  color: white;
+}
+
+option {
+  background-color: rgb(53,63,74);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(61,71,82);
+}
+
+p {
+  color: rgb(169,172,177);
+  font-weight: bold;
+}
+
+.none {
+    display: none;
+}
+
+.form-wrapper {
+  display: flex;
+}
+
+.left-checkboxes,
+.right-checkboxes {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+.right-checkboxes {
+  width: 100%;
+}
+
+.Right-Dark {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.Bottom {
+  margin-top: 50px;
+}
+
+.round {
+  opacity: 0;
+  position: absolute;
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  margin-top: -5px;
+  border-radius: 50%;
+  border: 2px solid rgb(136,136,125);
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.round:checked + span:before {
+  content: "\2713";
+  color: white;
+}
+
+.toggle {
+  margin-left: 100px;
+  margin-top: -75px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(48,58,67);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(55,188,164);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(36,150,242);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: greenyellow;
+}
+
+.Rose {
+  background-color: rosybrown;
+}
+
+.Yellow {
+  background-color: yellow;
+}
+
+.Orange {
+  background-color: orange;
+}
+
+.start {
+  margin-top: -2px;
+  font-weight: bold;
+}
+
+.end {
+  font-weight: bold;
+  padding-left: 40%;
+  margin-top: -32px;
+}
+
+.Regular,
+.Bold {
+  color: white;
+}
+
+.Checkbox-Regular{
+  display: none; /* Скрыть оригинальный флажок */
+}
+
+.Checkbox-Regular + .Regular::before, .Checkbox-Regular + .Bold::before{
+  vertical-align: middle;
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  margin-top: -5px;
+  padding: 1px;
+  background-color: rgb(48,58,67); /* Черный цвет флажка */
+  border-radius: 3px;
+  border-color: rgb(109,116,123);
+}
+
+.Checkbox-Regular:checked + .Regular::before{
+  content: "\2713";
+  font-size: 14px;
+  color: rgb(57,169,151);
+  text-align: center;
+}
+
+.Checkbox-Regular:checked + .Bold::before{
+  content: "\2713";
+  font-size: 14px;
+  color: rgb(57,169,151);
+  text-align: center;
+}
+
+.range {
+  width: 40%; /* Ширина ползунка */
+  height: 1px; /* Высота ползунка */
+  background-color: black; /* Цвет фона ползунка */
+  border-radius: 5px; /* Закругленные углы ползунка */
+}
+
+.range::-moz-range-thumb {
+  width: 15px; /* Ширина ползунка */
+  height: 15px; /* Высота ползунка */
+  background-color: rgb(55,187,164); /* Цвет кружка ползунка */
+  border-radius: 50%; /* Круглый ползунок */
+  cursor: pointer; /* Изменить курсор при наведении на ползунок */
+}

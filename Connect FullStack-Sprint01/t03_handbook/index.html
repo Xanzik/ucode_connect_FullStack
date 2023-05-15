@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Handbook</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Handbook</h1>
+    <p>HTML</p>
+    <div class="grid-container">
+    <div class="item">h1
+        <p>The h1 to h6 tags are used to define HTML headings</p>
+        <p>&lt;h1&gt;Title&lt;/h1&gt;</p>
+        <h1>Title</h1>
+    </div>
+    <div class="item">table
+        <p>Defines an HTML table</p>
+        <p>&lt;table&gt;Title&lt;/table&gt;</p>
+        <p>County Country Country</p>
+        <p>Germany Ukraine Poland</p>
+    </div>
+    <div class="item">hr
+        <p>Draws a horizontal line</p>
+        <p>&lt;hr&gt;</p>
+        <hr>
+        <p>ABC <hr></p>
+    </div>  
+    <div class="item">input
+        <p>Designed co create text fields, various buttons, radio buttons and checkboxes</p>
+        <p>&lt;input attrubutes&gt;</p>
+        <p>Your name: </p>
+        <input type="text" id="name" name="name">
+        <label>Checkbox:</label>
+        <input type="checkbox" id = "check" name = "check">
+    </div>
+    </div>
+    <p>CSS</p>
+    <div class="grid-container">
+      <div class="item">background
+          <p>specifies the background of an element</p>
+          <p>background: [];</p>
+          <h1 class = "back">Test Output</h1>
+      </div>
+      <div class="item">border
+          <p>specifies the style of the outline</p>
+          <p>border:2px solid #666</p>
+          <p class = "bord">Test</p>
+      </div>
+      <div class="item">font-size
+          <p>specifies the font size of the item.</p>
+          <p>font-size:24px</p>
+          <p class="font">ABC</p>
+      </div>  
+      <div class="item">text-transform
+          <p>controls the capitalization of text</p>
+          <p>text-transform: uppercase;</p>
+          <p class = "transform">Your name</p>
+      </div>
+      </div>
+      <p>PROTOCOLS</p>
+      <div class="grid-container">
+        <div class="item">
+          <p>HTTP methods</p>
+          <p>The GET method requests a representation of the resource. Queries using this method can only retrieve data.</p>
+          <p>The HEAD requests the resource in the same way as the GET method, but without the response body.</p>
+          <p>POST is used to send entities to a specific resource. It often causes a state change or some side effects on the server.</p>
+          <p>PUT replaces all current resource views with request data.</p>
+          <p>DELETE deletes the specified resource.</p>
+          <p>CONNECT establishes a “tunnel" to the server defined by the resource.</p>
+          <p>OPTIONS is used to describe the parameters of the connection to the resource.</p>
+          <p>TRACE calls the returned test message from the resource.</p>
+          <p>PATCH is used to partially modify the resource.</p>
+        </div>
+        <div class="item">
+          <p>Classes of response status codes</p>
+          <p>1xx: Informational</p>
+          <p>2xx: Success </p>
+          <p>3xx: Redirection</p>
+          <p>4xx: Client Error</p>
+          <p>5xx: Server Error</p>
+        </div>
+        <div class="item">
+          <p>DNS list by types</p>
+          <p>A record - The record that holds the IP address of a domain.</p>
+          <p>CNAME record - Forwards one domain or subdomain to another domain, does NOT provide an IP address.</p>
+          <p>MX record - Directs mail to an email server.</p>
+          <p>TXT record - Lets an admin store text notes in the record.</p>
+          <p>NS record - Stores the name server for a DNS entry.</p>
+          <p>SOA record - Stores admin information about a domain.</p>
+          <p>SRV record - Specifies a port for specific services.</p>
+          <p>PTR record - Provides a domain name in reverse-lookups.</p>
+        </div>  
+        <div class="item">
+        <p>Nslookup</p>
+        <p>The nslookup command gets DNS information about a host, including its IP addresses. For example, from the Windows command prompt, run:</p>
+        <p>Output:</p>
+          <p>Server:  your.gateway.name</p>
+          <p>Address:  your.gateway.address</p>
+          <p>Non-authoritative answer:</p>
+          <p>Name:    computerhope.com</p>
+          <p>Addresses:  2400:cb00:2048:1::6814:3876</p>
+          <p>2400:cb00:2048:1::6814:3276</p>
+          <p>104.20.50.118 104.20.56.118</p>
+        </div>
+        </div>
+  </body>
+</html>

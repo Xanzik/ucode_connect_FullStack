@@ -1,0 +1,479 @@
+@media (max-width: 768px) {
+  header {
+    display: none; 
+  }
+  .filter-group {
+    align-items: center;
+  }
+  .catalog-list {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+    text-align: center;
+    align-items: center;
+    margin-left: 30%;
+  }
+  .Catalog-container {
+    align-items: center;
+    text-align: center;
+    font-family: 'Witcher Handwriting', sans-serif;
+  }
+  h1 {
+    text-align: center;
+  }
+  .money-range {
+    height: 10px;
+    background: #000000;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .money-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #7a1f1f;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  .range-container {
+    align-items: center;
+    text-align: center;
+  }
+  .catalog {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .catalog-item {
+    display: flex;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .catalog-item-image {
+    flex-basis: 30%; /* Ширина блока с картинкой */
+    margin-right: 20px;
+  }
+  
+  .catalog-item-info {
+    display: block;
+    flex-direction: row;
+  }
+  
+  .catalog-item-info h3,
+  .catalog-item-info p {
+    margin: 0;
+  }
+
+  .product-info {
+    flex: 1;
+  }
+  
+  .product-description ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .product-reviews {
+    background-color: antiquewhite;
+    font-family: 'Witcher Handwriting', sans-serif;
+    width: 500px;
+    border: 5px solid #7a1f1f;
+    position: fixed;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0);
+    bottom: 25px;
+  }
+  
+  .product-reviews img {
+    float: left;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+  }
+
+  .product-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .product-image img {
+    height: 300px;
+    width: 400px;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    display: flex; /* Использовать flex-контейнер */
+    align-items: center; /* Выравнивание элементов по центру вертикально */
+    justify-content: space-between; /* Равномерное распределение элементов по горизонтали */
+    background: #c31432; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c31432, #240b36); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #c31432, #240b36); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px; /* Отступы внутри заголовка */
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .company-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-navigation ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .main-navigation ul li a {
+    text-decoration: none;
+    color: #b4b4b4; /* Цвет ссылок в навигации */
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .main-navigation ul li a:hover {
+    background-color: #333; /* Цвет фона ссылки при наведении */
+    color: #fff; /* Цвет текста ссылки при наведении */
+  }
+  
+  .search-form {
+    display: flex; /* Использовать flex-контейнер */
+    align-items: center; /* Выравнивание элементов по центру вертикально */
+    font-family: 'Witcher Handwriting', sans-serif;
+  }
+  
+  .search-form input[type="text"] {
+    background-color: inherit;
+    border-color: inherit;
+    color:whitesmoke;
+    padding: 5px;
+    width: 200px;
+  }
+  
+  input[type="text"]::placeholder {
+    font-family: 'Witcher Handwriting', sans-serif;
+  }
+  
+  .company-name {
+    color:whitesmoke;
+    font-size: 24px;
+    font-family: 'Witcher Handwriting', sans-serif;
+    font-weight: bold;
+  }
+  .catalog-list {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+  }
+  .filters {
+    width: 20%; /* Ширина блока с фильтрами */
+    padding: 20px;
+  }
+  .Catalog-container {
+    display: flex;
+    font-family: 'Witcher Handwriting', sans-serif;
+  }
+  .money-range {
+    height: 10px;
+    background: #000000;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .money-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #7a1f1f;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  .range-container {
+    display: flex;
+    align-items: center;
+  }
+  .catalog {
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .catalog-item {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .catalog-item-image {
+    flex-basis: 30%; /* Ширина блока с картинкой */
+    margin-right: 20px;
+  }
+  
+  .catalog-item-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .catalog-item-info h3,
+  .catalog-item-info p {
+    margin: 0;
+  }
+
+  .footer {
+    display: flex; /* Использовать flex-контейнер */
+    align-items: center; /* Выравнивание элементов по центру вертикально */
+    justify-content: space-between; /* Равномерное распределение элементов по горизонтали */
+    background: #c31432; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c31432, #240b36); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #c31432, #240b36); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px; /* Отступы внутри заголовка */
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .left-text {
+    text-align: left;
+    /* Стили для надписи слева */
+  }
+
+  .right-text {
+    text-align: right;
+    /* Стили для надписи справа */
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 10px;
+    /* Дополнительные стили для ссылок */
+  }
+
+  .product-info {
+    flex: 1;
+  }
+  
+  .product-description ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .product-reviews {
+    background-color: antiquewhite;
+    font-family: 'Witcher Handwriting', sans-serif;
+    width: 500px;
+    border: 5px solid #7a1f1f;
+    position: fixed;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0);
+    bottom: 15%;
+  }
+  
+  .product-reviews img {
+    float: left;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    margin-left: 5%;
+  }
+
+  .product-page {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .product-image img {
+    height: 300px;
+    width: 400px;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Witcher Handwriting', sans-serif;
+}
+
+h1 {
+  margin-left: 1%;
+}
+
+.breadcrumbs {
+  color:whitesmoke;
+  font-family: 'Witcher Handwriting', sans-serif;
+  background: rgb(195,20,50);
+  background: linear-gradient(90deg, rgba(195,20,50,0.742734593837535) 0%, rgba(36,11,54,0.7679446778711485) 100%);
+  padding: 15px;
+}
+
+.breadcrumbs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+}
+
+.breadcrumbs li:not(:last-child):after {
+  content: "/";
+  margin: 0 5px;
+}
+
+.breadcrumbs li a {
+  text-decoration: none;
+  color: whitesmoke; /* Цвет ссылок хлебных крошек */
+}
+
+.breadcrumbs li a:hover {
+  text-decoration: underline;
+}
+
+.filter-group {
+  margin-bottom: 10px;
+}
+
+h3, h4 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.custom-checkbox {
+
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-color: black;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: black
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.money-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+img {
+  height: 100px;
+  width: 150px;
+}
+
+.catalog-item-info p {
+  color: #c31432;
+}
+
+.button-buy {
+  background-color: gray; /* Измените цвет на нужный вам */
+  border-radius: 25%;
+  pointer-events: none;
+  /* Дополнительные стили кнопки, если нужно */
+}
+
+.button-buy-avaibled {
+  background-color: white; /* Измените цвет на нужный вам */
+  border-radius: 25%;
+  /* Дополнительные стили кнопки, если нужно */
+}
+
+.avaibled {
+  color: rgb(44, 145, 44) !important;
+}
+
+.microformat {
+  text-decoration: none; /* Удалить подчеркивание ссылки */
+  color: inherit; /* Наследовать цвет текста от родительского элемента */
+}
+
+.microformat:hover,
+.microformat:active {
+  /* Стили при наведении и активации ссылки */
+  text-decoration: none; /* Удалить подчеркивание ссылки */
+  color: inherit; /* Наследовать цвет текста от родительского элемента */
+}
+
+.product-image {
+  flex: 1;
+}
+
+.button-buy-page {
+  width: 100px;
+}
+
+h2 {
+  text-align: center;
+}

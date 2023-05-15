@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Neverland-Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/witcher-handwriting" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+        <div class="company-name">NEVERLAND</div>
+        <nav class="main-navigation">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+                <form class="search-form" action="/search" method="GET">
+                <input type="text" name="query" placeholder="Your cherished desires...">
+            </li>
+            <li><a href="#">Phone: +380508543000</a></li>
+          </ul>
+        </nav>
+      </div>
+      </header>
+      <div class="breadcrumbs">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Catalog</a></li>
+        </ul>
+      </div>
+      <h1>Catalog</h1>
+      <div class = "Catalog-container">
+        <div class="filters">
+          <h3>Choose...</h3>
+          <label for="checkbox1" class="custom-checkbox">
+            <input type="checkbox" id="checkbox1" checked>
+            <span class="checkmark"></span>
+            <span class="checkbox-label">Witchers</span>
+          </label>
+          <label for="checkbox2" class="custom-checkbox">
+            <input type="checkbox" id="checkbox2" checked>
+            <span class="checkmark"></span>
+            <span class="checkbox-label">Swords</span>
+          </label>
+          <div class="filter-group">
+            <h4>Type of Sword</h4>
+            <label><input type="checkbox" name="color" value="red">Steel</label>
+            <label><input type="checkbox" name="color" value="blue">Silver</label>
+          </div>
+          <div class="filter-group">
+            <h4>How many crowns will you give?</h4>
+            <div class="range-container">
+              <span class="range-label">0</span>
+              <input type="range" min="0" max="200" step="1" value="100" class="money-range">
+              <span class="range-label">2000</span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog">
+          <div class="catalog-list">
+            <div class="catalog-item">
+                <a href="card.html" class="microformat">
+              <div class="catalog-item-image">
+                <img src="assets/images/photo_2023-05-15_20-35-06.jpg" alt="Product 1">
+              </div>
+              <div class="catalog-item-info">
+                <h3>The Templar Sword</h3>
+                <p>unavaibled</p>
+                <span class="price">50000 crowns</span>
+                <button class = "button-buy">Buy</button>
+              </div>
+              </a>
+            </div>
+            <div class="catalog-item">
+                <a href="card.html" class="microformat">
+              <div class="catalog-item-image">
+                <img src="assets/images/photo_2023-05-15_20-35-24.jpg" alt="Product 2">
+              </div>
+              <div class="catalog-item-info">
+                <h3>Fire Destiny Sword</h3>
+                <p>unavaibled</p>
+                <span class="price">25000 crowns</span>
+                <button class = "button-buy">Buy</button>
+              </div>
+            </a>
+            </div>
+            <div class="catalog-item">
+              <a href="card.html" class="microformat">
+              <div class="catalog-item-image">
+                <img src="assets/images/photo_2023-05-15_20-35-32.jpg" alt="Product 3">
+              </div>
+              <div class="catalog-item-info">
+                <h3>Lambert's Steel Sword</h3>
+                <p>unavaibled</p>
+                <span class="price">2500 crowns</span>
+                <button class = "button-buy">Buy</button>
+              </div>
+              </a>
+            </div>
+            <div class="catalog-item">
+              <a href="card.html" class="microformat">
+              <div class="catalog-item-image">
+                <img src="assets/images/photo_2023-05-15_20-35-35.jpg" alt="Product 4">
+              </div>
+              <div class="catalog-item-info">
+                <h3>Vesemir's Silver Sword</h3>
+                <p class = "avaibled">avaibled</p>
+                <span class="price">5000 crowns</span>
+                <button class = "button-buy-avaibled">Buy</button>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
