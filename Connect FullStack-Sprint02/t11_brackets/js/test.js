@@ -63,6 +63,4 @@ describe('checkBrackets', () => {
     }
   });
 });
-
-
   mocha.run();

@@ -1,9 +1,9 @@
 // Prompt the user to enter a number from 1 to 10
-let inputNumber = parseInt(prompt("Enter a number from 1 to 10:"));
+let inputNumber = Number(prompt("Enter a number from 1 to 10:"));
 
 // Validate the input
-while (isNaN(inputNumber) || inputNumber < 1 || inputNumber > 10) {
-  inputNumber = parseInt(prompt("Invalid input. Please enter a number from 1 to 10:"));
+while (Number.isNaN(inputNumber) || inputNumber < 1 || inputNumber > 10) {
+  inputNumber = Number(prompt("Invalid input. Please enter a number from 1 to 10:"));
 }
 
 // Display an idiom based on the input value

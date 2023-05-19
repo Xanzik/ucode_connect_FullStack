@@ -9,21 +9,23 @@ if (!/^[a-zA-Z]+$/.test(animalName) || animalName.length > 20) {
   let gender = prompt("Is the superhero male or female? Leave blank if unknown or other.");
 
   // Validate gender input
-  if (!/^(male|female)?$/i.test(gender)) {
+  let genderRegex = /^(male|female)?$/i;
+  if (!genderRegex.test(gender)) {
     alert("Invalid gender input. Please enter 'male', 'female', or leave it blank.");
   } else {
     // Prompt the user to enter the age
     let age = prompt("How old is the superhero?");
 
     // Validate age input
-    if (!/^\d{1,5}$/.test(age) || age == 0) {
+    let ageRegex = /^\d{1,5}$/;
+    if (!ageRegex.test(age) || age == 0) {
       alert("Invalid age input. Please enter digits only (length <= 5) and cannot start with zero.");
     } else {
       // Generate description based on gender and age
       let description;
-      if (gender === "male" || gender === "Male") {
+      if (gender.match(/^(male|Male)$/)) {
         description = age < 18 ? "boy" : "man";
-      } else if (gender === "female" || gender === "Female") {
+      } else if (gender.match(/^(female|Female)$/)) {
         description = age < 18 ? "girl" : "woman";
       } else {
         description = age < 18 ? "kid" : "hero";
