@@ -4,7 +4,7 @@ function promptUser(previousResult) {
     var userInput = prompt('Previous result: ' + previousResult + '. Enter a new number:');
   
     // Check if the user input is a valid number
-    var number = parseInt(userInput);
+    var number = Number(userInput);
     if (isNaN(number)) {
       // Display an error message for invalid input
       console.error('Invalid number!');

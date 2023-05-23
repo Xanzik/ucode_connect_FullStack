@@ -8,7 +8,7 @@ const validator = {
     },
     set(target, property, value) {
       if (property === 'age') {
-        if (typeof value !== 'number' || !Number.isInteger(value)) {
+        if (Number.isNaN(value) || !Number.isInteger(value)) {
           console.log('Uncaught TypeError: The age is not an integer');
           return;
         }
