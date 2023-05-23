@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Human and Superhero Visualization</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <img class="image" id = "image" src="assets/images/photo_2023-05-22_19-31-08.jpg" alt="Human Image">
+      <p id="first-name">First Name: </p>
+      <p id="last-name">Last Name: </p>
+      <p id="gender">Gender: </p>
+      <p id="age">Age: </p>
+      <p id="calories">Calories: </p>
+      <button class="method-btn" onclick="setFirstName()">Set First Name</button>
+      <button class="method-btn" onclick="setLastName()">Set Last Name</button>
+      <button class="method-btn" onclick="setGender()">Set Gender</button>
+      <button class="method-btn" onclick="setAge()">Set Age</button>
+      <button class="method-btn" onclick="setCalories()">Set Calories</button>
+      <br>
+      <button class="method-btn" onclick="sleepFor()">Sleep For</button>
+      <button class="method-btn" onclick="feed()">Feed</button>
+      <button class="method-btn superhero-method" onclick="fly()">Fly</button>
+      <button class="method-btn superhero-method" onclick="fightWithEvil()">Fight with Evil</button>
+      <br>
+      <button class="method-btn" onclick="turnIntoSuperhero()">Turn into Superhero</button>
+    </div>
+    <div id="output"></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
