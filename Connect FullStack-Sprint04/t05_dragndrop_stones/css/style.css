@@ -1,0 +1,31 @@
+.block {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+
+.block.draggable {
+    border: 2px solid black;
+}
+
+#red {
+    background-color: red;
+}
+#blue {
+    background-color: blue;
+}
+#purple {
+    background-color: purple;
+}
+#yellow {
+    background-color: yellow;
+}
+#orange {
+    background-color: orange;
+}
+#green {
+    background-color: green;
+}

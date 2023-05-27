@@ -1,0 +1,43 @@
+.table {
+border: 5px solid black;
+text-align: center;
+height: 100%;
+margin: 20px;
+}
+
+.thead {
+background-color: rgb(227,16,14);
+}
+
+.tbody {
+background-color: rgb(211,211,211);
+}
+
+#notification{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    color: rgb(31, 29, 29);
+    text-align: center;
+    background-color: rgb(128, 128, 128);
+    width: 25%;
+    height: 4%;
+    border-radius: 30px;
+    font-size: 12px;
+  }
+  
+
+td, th {
+padding: 10px;
+height: 25%;
+width: 25%;
+}
