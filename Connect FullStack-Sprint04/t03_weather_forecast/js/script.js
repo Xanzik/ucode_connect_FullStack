@@ -6,9 +6,6 @@ const city = 'London';
 // Fetch the weather forecast data from OpenWeatherMap API
 fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`)
   .then(response => {
-    if (!response.ok) {
-      throw new Error('Unable to fetch weather data.');
-    }
     return response.json();
   })
   .then(data => {

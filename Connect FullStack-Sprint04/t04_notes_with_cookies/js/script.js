@@ -52,16 +52,29 @@
     }
 
     // Update the output field with the notes from the cookies
-    function updateOutputField() {
-      var archive = getArchiveFromCookies();
-      var outputField = document.getElementById("outputField");
+// Update the output field with the notes from the cookies
+  function updateOutputField() {
+    var archive = getArchiveFromCookies();
+    var outputField = document.getElementById("outputField");
 
-      if (archive.length === 0) {
-        outputField.textContent = "[Empty]";
-      } else {
-        outputField.textContent = archive.join(", ");
-      }
+    if (archive.length === 0) {
+      outputField.textContent = "[Empty]";
+    } else {
+      outputField.innerHTML = ""; // Clear the output field
+
+      archive.forEach(function (note, index) {
+        var noteElement = document.createElement("div");
+        noteElement.textContent = "--> " + note;
+        
+        if (index < archive.length - 1) {
+          noteElement.innerHTML += "<br>"; // Add a line break after each note
+        }
+
+        outputField.appendChild(noteElement);
+      });
     }
+  }
+
 
     // Load the initial notes from cookies when the page is loaded
     window.onload = function () {
