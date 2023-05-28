@@ -1,0 +1,42 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+#image-container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#message {
+  position: fixed;
+  width: 150px;
+  top: 2%;
+  right: 1%;
+  padding: 5px;
+  display: none;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 25px;
+}
+
+#message.show {
+  display: block;
+}
+
+#message.success {
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 25px;
+}

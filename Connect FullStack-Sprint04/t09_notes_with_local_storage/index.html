@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Note Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="button-container">
+      <button class = "add" onclick="addToArchive()">Add to storage</button>
+      <button class = "clear" onclick="clearArchive()">Clear storage</button>
+    </div>
+    <div class = "container_for_label">
+    <label class = "labels" for="textInput">Text Input:</label>
+    <textarea id="textInput" placeholder="Enter your note"></textarea>
+  </div>
+  <div class = "container_for_label">
+    <label class = "labels">Nothes archive:</label>
+    <div id="outputField"></div>
+  </div>
+  </div>
+  <script src = "js/script.js"></script>
+</body>
+</html>
