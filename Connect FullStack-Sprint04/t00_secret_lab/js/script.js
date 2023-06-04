@@ -7,7 +7,6 @@ let currentState = 0;
 function transformation() {
   const hero = document.getElementById('hero');
   const lab = document.getElementById('lab');
-
   // Toggle between states
   if (currentState === 1) {
     // State 1
