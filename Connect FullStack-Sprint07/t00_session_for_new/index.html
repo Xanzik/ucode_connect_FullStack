@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form and Session</title>
+</head>
+<body>
+    <h1 id="dataTitle">Data:</h1>
+    <div id="data">
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Description:</strong> <span id="description"></span></p>
+        <p><strong>Photo:</strong> <span id="photo"></span></p>
+        <p><strong>Superpowers:</strong> <span id="superpowers"></span></p>
+        <p><strong>Publicness:</strong> <span id="public"></span></p>
+    </div>
+
+    <form id="dataForm">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" name="nameInput"><br><br>
+
+        <label for="descriptionInput">Description:</label>
+        <textarea id="descriptionInput" name="descriptionInput" rows="4" cols="50"></textarea><br><br>
+
+        <label for="photoInput">Photo URL:</label>
+        <input type="text" id="photoInput" name="photoInput"><br><br>
+
+        <label for="superpowersInput">Superpowers:</label>
+        <input type="text" id="superpowersInput" name="superpowersInput"><br><br>
+
+        <label for="publicInput">Publicness:</label>
+        <select id="publicInput" name="publicInput">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+        </select><br><br>
+
+        <button type="submit" id="submitButton">Submit</button>
+        <button type="button" id="forgetButton">Forget</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

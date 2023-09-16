@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Conversion</title>
+</head>
+<body>
+    <div>
+        <h1>String Conversion</h1>
+        <label for="inputString">Input String:</label>
+        <input type="text" id="inputString" placeholder="Enter a string to convert">
+        <br>
+        <label for="charset">Select Charset:</label>
+        <select id="charset">
+            <option value="UTF-8">UTF-8</option>
+            <option value="ISO-8859-1">ISO-8859-1</option>
+            <option value="Windows-1251">Windows-1251</option>
+        </select>
+
+        <button onclick="changeCharset()">Change Charset</button>
+        <button onclick="clearFields()">Clear</button>
+
+        <div id="output-container">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

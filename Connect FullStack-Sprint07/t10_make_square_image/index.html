@@ -1,0 +1,37 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Manipulation</title>
+</head>
+<body>
+    <h1>Image Manipulation</h1>
+    
+    <!-- Input field for URL -->
+    <label for="imageUrl">Enter Image URL:</label>
+    <input type="text" id="imageUrl">
+    <button onclick="loadAndManipulateImage()">Load & Manipulate</button>
+
+    <!-- Display the images in a grid -->
+    <div class="image-grid">
+        <div class="image-container">
+            <img id="squareImage" alt="Square Image">
+        </div>
+        <div class="image-container">
+            <img id="rChannel" alt="R Channel">
+        </div>
+        <div class="image-container">
+            <img id="gChannel" alt="G Channel">
+        </div>
+        <div class="image-container">
+            <img id="bChannel" alt="B Channel">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

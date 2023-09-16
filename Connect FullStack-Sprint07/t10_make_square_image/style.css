@@ -1,0 +1,18 @@
+/* style.css */
+
+/* Style for the image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Style for each image container */
+.image-container {
+    text-align: center;
+}
+
+img {
+    max-width: 100%; /* Limit the maximum width to 100% of the container */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}

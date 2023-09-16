@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+</head>
+<body>
+    <h1>File Manager</h1>
+
+    <section id="file-creation">
+        <h2>Create a File</h2>
+        <form action="/create-file" method="POST">
+            <label for="fileName">File Name:</label>
+            <input type="text" id="fileName" name="fileName" required>
+            <br>
+            <label for="fileContent">File Content:</label>
+            <textarea id="fileContent" name="fileContent" required></textarea>
+            <br>
+            <button type="submit">Create File</button>
+        </form>        
+    </section>
+
+    <section id="file-list">
+        <h2>File List</h2>
+        <ul id="file-list-ul"></ul>
+    </section>
+
+    <section id="current-file">
+        <h2>Current File</h2>
+        <p id="current-file-name">No file selected.</p>
+        <pre id="current-file-content"></pre>
+        <button id="delete-file-button">Delete File</button>
+    </section>
+
+    <script>
+
+        function updateFileList() {
+            fetch('/list-files')
+                .then(response => response.json())
+                .then(data => {
+                    const fileListUl = document.getElementById('file-list-ul');
+                    fileListUl.innerHTML = ''; 
+                    data.forEach(fileName => {
+                        const listItem = document.createElement('li');
+                        const fileLink = document.createElement('a');
+                        fileLink.textContent = fileName;
+                        fileLink.href = `/get-file?fileName=${encodeURIComponent(fileName)}`;
+                        listItem.appendChild(fileLink);
+                        fileListUl.appendChild(listItem);
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+    
+
+        updateFileList();
+    </script>
+<script>
+
+    function selectFile(fileName) {
+        const currentFileName = document.getElementById('current-file-name');
+        const currentFileContent = document.getElementById('current-file-content');
+        
+        const file = fileList.getFileByName(fileName);
+        if (file) {
+            currentFileName.textContent = file.name;
+            currentFileContent.textContent = file.read();
+        } else {
+            currentFileName.textContent = 'File not found.';
+            currentFileContent.textContent = '';
+        }
+    }
+
+
+    selectFile('No file selected.');
+
+
+    const fileListUl = document.getElementById('file-list-ul');
+    fileListUl.addEventListener('click', (event) => {
+        if (event.target.tagName === 'A') {
+            event.preventDefault();
+            const fileName = event.target.getAttribute('data-file-name');
+            selectFile(fileName); 
+        }
+    });
+
+
+    const deleteFileButton = document.getElementById('delete-file-button');
+    deleteFileButton.addEventListener('click', () => {
+        const currentFileName = document.getElementById('current-file-name').textContent;
+        if (currentFileName !== 'No file selected.') {
+            fetch('/delete-file', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ fileName: currentFileName }),
+            })
+            .then(response => response.text())
+            .then(() => {
+                selectFile('No file selected.'); 
+                updateFileList(); 
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        }
+    });
+
+
+    function updateFileList() {
+        fetch('/list-files')
+            .then(response => response.json())
+            .then(data => {
+                const fileListUl = document.getElementById('file-list-ul');
+                fileListUl.innerHTML = ''; 
+                data.forEach(fileName => {
+                    const listItem = document.createElement('li');
+                    const fileLink = document.createElement('a');
+                    fileLink.textContent = fileName;
+                    fileLink.href = '#';
+                    fileLink.setAttribute('data-file-name', fileName); 
+                    listItem.appendChild(fileLink);
+                    fileListUl.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+
+    updateFileList();
+
+</script>
+
+    
+    
+</body>
+</html>

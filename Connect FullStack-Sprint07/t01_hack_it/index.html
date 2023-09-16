@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+</head>
+<body>
+    <h1>Password</h1>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password">
+    <p id="passwordStatus"></p>
+
+
+    <label for="salt">Salt:</label>
+    <input type="text" id="salt" placeholder="Enter your salt">
+
+    <button onclick="generateHash()">Generate Hash</button>
+
+    <p id="hashResult"></p>
+
+    <button onclick="saveToSession()">Save</button>
+
+    <p id="savedData"></p>
+
+    <label for="guess">Guess the Password:</label>
+    <input type="password" id="guess" placeholder="Enter your guess">
+
+    <button onclick="checkGuess()">Check</button>
+
+    <button onclick="clearSession()">Clear</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
