@@ -10,6 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(express.static('views'));
 
 app.use(session({
   secret: 'your-secret-key',
@@ -31,11 +32,11 @@ async function initializeDatabase() {
 initializeDatabase();
 
 app.get('/registration', (req, res) => {
-  res.sendFile(__dirname + '/public/registration.html');
+  res.sendFile(__dirname + '/views/registration.html');
 });
 
 app.get('/registered', (req, res) => {
-  res.sendFile(__dirname + '/public/registered.html');
+  res.sendFile(__dirname + '/views/registered.html');
 });
 
 
@@ -72,7 +73,7 @@ app.post('/login', async (req, res) => {
       req.session.loggedIn = true;
       req.session.user = user;
 
-      res.sendFile(__dirname + '/public/logged.html');
+      res.sendFile(__dirname + '/views/logged.html');
     } else {
       res.status(401).json({ error: 'Unauthorized' });
     }
@@ -83,7 +84,7 @@ app.post('/login', async (req, res) => {
 });
 
 app.get('/forgot-password', (req, res) => {
-  res.sendFile(__dirname + '/public/forgot-password.html');
+  res.sendFile(__dirname + '/views/forgot-password.html');
 });
 
 
