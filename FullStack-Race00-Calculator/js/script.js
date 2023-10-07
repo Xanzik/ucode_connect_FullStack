@@ -165,8 +165,6 @@ function calculateOnce() {
     document.getElementById("display").value = arrNum[0];
 }
 
-// creative part
-
 function toggleAdditionalButtons() {
     var additionalButtons = document.querySelector('.additional-buttons');
     var additionalButtonsBottom = document.querySelector('.additional-buttons-bottom');
